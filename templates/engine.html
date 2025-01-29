@@ -716,7 +716,7 @@
  
  function optionClicked(option) {
  document.querySelectorAll(".popup").forEach(popup => popup.style.display = "none");
- const popup = document.getElementById(popup${option});
+ const popup = document.getElementById(`popup${option}`);
  if (popup) {
  popup.style.display = "block";
  document.getElementById("overlay").style.display = "block";
@@ -746,10 +746,9 @@ function openHelpPage() {
 
 function searchProblems() {
  const input = document.getElementById("searchInput").value.toLowerCase();
- alert(Searching for: ${input});
+ alert(`Searching for: ${input}`);
 }
 
 </script>
-
 </body>
 </html>
