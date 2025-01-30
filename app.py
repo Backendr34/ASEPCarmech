@@ -91,6 +91,15 @@ def index_page():
     username = session["username"]
     return render_template("index.html", username=username)
 
+# Tyre page
+@app.route("/tyre")
+def tyre_page():
+    if "usernname" not in session:
+        flash("Please log in to access this page.", "warning")
+        return redirect(url_for("tyre_page"))
+        return render_template("tyre.html")
+
+
 
 # Engine page
 @app.route("/engine")
