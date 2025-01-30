@@ -94,11 +94,10 @@ def index_page():
 # Tyre page
 @app.route("/tyre")
 def tyre_page():
-    if "usernname" not in session:
+    if "username" not in session:
         flash("Please log in to access this page.", "warning")
-        return redirect(url_for("tyre_page"))
-        return render_template("tyre.html")
-
+        return redirect(url_for("login_page"))
+    return render_template("tyre.html")
 
 
 # Engine page
