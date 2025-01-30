@@ -9,13 +9,14 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
+            /* background-color: #f9f9f9; */
+            color: #f0f0f0;
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 20px;
             margin: 0;
+            background-image: url('https://img.freepik.com/premium-photo/shiny-car-brake-disc-displayed-against-dark-background-emphasizing-its-mechanical-precision-industrial-aesthetic_95891-108626.jpg');
         }
 
         header {
@@ -25,6 +26,17 @@
             padding: 10px 20px;
             text-align: center;
             font-size: 24px;
+        }
+
+        #background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+           opacity: 0.9;
         }
 
         .content {
@@ -155,7 +167,7 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(241, 239, 239, 0.5);
             z-index: 999;
         }
 
@@ -314,10 +326,10 @@
 </head>
 <body>
 
-
-   <p>Changes show up. part 222</p>
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVEADC3qJLcSX4JTE-dLj9R5_fHSGpvnOtZA&s" alt="car">
-   
+    <video id="background-video" autoplay loop muted>
+        <source src="https://videos.pexels.com/video-files/9031118/9031118-uhd_2560_1440_24fps.mp4">
+    </video>
+    
 
 
 <header>
@@ -325,8 +337,8 @@
 </header>
 
 <div class="content">
-   <h1>BRAKES SYSTEMS</h1>
-   <p>LEARN HOW TO MAINTAIN AND REPAIR YOUR BRAKES.</p>
+   <h1 style="font-size: 35px;">BRAKES SYSTEMS</h1>
+   <p style="color:#ddd ;">LEARN HOW TO MAINTAIN AND REPAIR YOUR BRAKES.</p>
 
    <div class="search-bar">
        <input type="text" id="searchInput" placeholder="Search your problem...">
