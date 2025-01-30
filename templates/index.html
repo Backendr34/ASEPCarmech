@@ -27,6 +27,7 @@
             background-color: #333;
             padding: 1rem;
             position: relative;
+            font-family: 'Times New Roman', Times, serif;
         }
 
         .navbar a {
@@ -36,6 +37,7 @@
             margin: 0 0.5rem;
             border-radius: 5px;
             transition: background-color 0.3s;
+            margin-left: 20px;
         }
 
         .navbar a:hover {
@@ -50,9 +52,9 @@
         }
 
         .profile img {
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
+            border-radius: 70%;
+            width: 50px;
+            height: 50px;
             margin-right: 0.5rem;
         }
 
@@ -193,21 +195,105 @@
 
     
     <div class="navbar">
-        <div>
-            <a href="#">Home</a>
-            <a href="#">Services</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
+        <div style="font-size: 15px; padding: 15px; padding-left: 50px;">
+            <a href="#">HOME</a>
+            <a href="#">SERVICES</a>
+            <a href="#">ABOUT</a>
+            <a href="#">CONTACT</a>
+            <br>
         </div>
         <div class="profile">
             <img src="https://i.pinimg.com/736x/c5/94/96/c5949627262b8098970838894f57c94e.jpg" alt="Profile Picture">
-            <a href="http://127.0.0.1:5000/profile">Profile</a>
+            <a href="http://127.0.0.1:5000/profile">PROFILE</a>
         </div>
+    </div>
+
+    <div>
+        <div id=containerrr>
+            What are you looking for?
+            <div id=flip>
+              <div><div>ENGINE?</div></div>
+              <div><div>BRAKE?</div></div>
+              <div><div>TYRE?</div></div>
+            </div>
+            All at one place !
+          </div>
+          <style>
+            @import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+body {
+  margin:0px;
+  font-family:'Roboto';
+  text-align:center;
+}
+
+#containerrr {
+  color:#4CAF50;
+  text-shadow: 2px 2px;
+  text-transform: uppercase;
+  font-size:36px;
+  font-weight:bold;
+  padding-top:20px;  
+  position:relative;
+  width:100%;
+  bottom:45%;
+  display:block;
+  margin-top: 20px;
+}
+
+#flip {
+  height:50px;
+  overflow:hidden;
+}
+
+#flip > div > div {
+  color:#fff;
+  padding:4px 12px;
+  height:45px;
+  margin-bottom:45px;
+  display:inline-block;
+}
+
+#flip div:first-child {
+  animation: show 5s linear infinite;
+}
+
+#flip div div {
+  background:#efe81f;
+}
+#flip div:first-child div {
+  background:#4ec7f3;
+}
+#flip div:last-child div {
+  background:#DC143C;
+}
+
+@keyframes show {
+  0% {margin-top:-270px;}
+  5% {margin-top:-180px;}
+  33% {margin-top:-180px;}
+  38% {margin-top:-90px;}
+  66% {margin-top:-90px;}
+  71% {margin-top:0px;}
+  99.99% {margin-top:0px;}
+  100% {margin-top:-270px;}
+}
+
+#flip p {
+    position:fixed;
+  width:100%;
+  bottom:30px;
+  font-size:12px;
+  color:#999;
+  margin-top:200px;
+}
+
+          </style>
     </div>
     
     <div class="container">
-        <h1>What Are You Looking For?</h1>
-        <p>Your go-to place for car repair and maintenance advice.</p>
+        <!-- <h1 style="text-shadow: 0px 2px;">What Are You Looking For?</h1>
+        <p style="font-size: 20px;">Your go-to place for car repair and maintenance advice.</p> -->
 
         <div class="search-bar">
             <select>
@@ -235,10 +321,23 @@
                 <h2><a href="http://127.0.0.1:5000/trans">Transmission</a></h2>
                 <p>Tips on keeping your transmission running smoothly.</p>
             </div>
-            <br>
+            
+        </div>
+
+        <div class="key-components">
             <div class="component">
                 <h2><a href="http://127.0.0.1:5000/tyre">Tyre Assistant</a></h2>
-                <p>All the Tyre Assisting Aid.</p>
+                <p>All the Tyre Assisting Aid with easy solutions.</p>
+                <br>
+                
+            </div>
+            <div class="component">
+                <h2><a href="">coming soon .....</a></h2>
+                <p></p>
+            </div>
+            <div class="component">
+                <h2><a href="">coming soon .....</a></h2>
+                <p></p>
             </div>
         </div>
     </div>
