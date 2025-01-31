@@ -99,6 +99,14 @@ def tyre_page():
         return redirect(url_for("login_page"))
     return render_template("tyre.html")
 
+# about page
+@app.route("/about")
+def about_page():
+    if "username" not in session:
+        flash("Please log in to access this page.", "warning")
+        return redirect(url_for("login_page"))
+    return render_template("about.html")
+
 
 # Engine page
 @app.route("/engine")
@@ -202,7 +210,4 @@ def submit_query():
 
 if _name_ == '_main_':
     app.run(debug=True)
-
-
-
 
